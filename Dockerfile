@@ -19,4 +19,4 @@ ADD http://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.log/1.0.1/or
 EXPOSE 8080
 EXPOSE 8000
 VOLUME /opt/felix/current/load
-# CMD cd /opt/felix/current && java -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n -jar bin/felix.jar
+CMD cd /opt/felix/current && java -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n -jar bin/felix.jar
