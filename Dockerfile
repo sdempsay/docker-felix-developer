@@ -17,5 +17,6 @@ ADD http://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.scr/1.8.2/or
 ADD http://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.fileinstall/3.4.0/org.apache.felix.fileinstall-3.4.0.jar /opt/felix/current/bundle/
 ADD http://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.log/1.0.1/org.apache.felix.log-1.0.1.jar /opt/felix/current/bundle/
 EXPOSE 8080
+EXPOSE 8000
 VOLUME /opt/felix/current/load
-# CMD cd /opt/felix/current && java -jar bin/felix.jar
+# CMD cd /opt/felix/current && java -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n -jar bin/felix.jar
